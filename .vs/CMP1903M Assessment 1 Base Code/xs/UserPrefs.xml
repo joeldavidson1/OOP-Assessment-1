@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{87AEB7BE-417D-49F6-874B-9143BE5E557C}|Default">
+  <MonoDevelop.Ide.ItemProperties.CMP1903M_220Assessment_2201_220Base_220Code PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="CMP1903M Assessment 1 Base Code/Program.cs">
+    <Files>
+      <File FileName="CMP1903M Assessment 1 Base Code/Program.cs" Line="1" Column="1" />
+      <File FileName="CMP1903M Assessment 1 Base Code/Input.cs" Line="1" Column="1" />
+      <File FileName="CMP1903M Assessment 1 Base Code/Analyse.cs" Line="1" Column="1" />
+      <File FileName="CMP1903M Assessment 1 Base Code/Report.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CMP1903M Assessment 1 Base Code" expanded="True">
+            <Node name="CMP1903M Assessment 1 Base Code" expanded="True">
+              <Node name="Program.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
