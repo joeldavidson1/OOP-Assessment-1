@@ -28,7 +28,6 @@ namespace CMP1903M_Assessment_1_Base_Code
         // Receives a dictionary and outputs the corresponding values to the console in a readable format.
         public void LetterFrequencyOutputToConsole(Dictionary<char, int> charFrequency)
         {
-            int max = 0;
             foreach (var charAndFrequency in charFrequency)
             {
                 // Checks the keys to see if they are upper and lower case letters only.
