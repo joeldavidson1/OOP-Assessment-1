@@ -1,0 +1,15 @@
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.csproj.AssemblyReference.cache
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.GeneratedMSBuildEditorConfig.editorconfig
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.AssemblyInfoInputs.cache
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.AssemblyInfo.cs
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.csproj.CoreCompileInputs.cache
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/bin/Debug/net6.0/CMP1903M Assessment 1 Base Code
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/bin/Debug/net6.0/CMP1903M Assessment 1 Base Code.deps.json
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/bin/Debug/net6.0/CMP1903M Assessment 1 Base Code.runtimeconfig.json
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/bin/Debug/net6.0/CMP1903M Assessment 1 Base Code.dll
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/bin/Debug/net6.0/CMP1903M Assessment 1 Base Code.pdb
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.dll
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/refint/CMP1903M Assessment 1 Base Code.dll
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.pdb
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/CMP1903M Assessment 1 Base Code.genruntimeconfig.cache
+/Users/joeldavidson/repos/OOP-Assessment-1/CMP1903M Assessment 1 Base Code/obj/Debug/net6.0/ref/CMP1903M Assessment 1 Base Code.dll
