@@ -43,8 +43,6 @@ namespace CMP1903M_Assessment_1_Base_Code
                 else if (option == "2")
                 {
                     // Ask the user for a file path of a .txt file and catch invalid file path exceptions.
-                    inputClass.ValidFileInput();
-                    
                     // Checks to see if the file path is valid. If it's not then it prompts the user again.
                     if (inputClass.ValidFileInput() == false)
                     {
