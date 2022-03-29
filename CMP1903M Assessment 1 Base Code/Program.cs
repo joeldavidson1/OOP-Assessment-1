@@ -39,6 +39,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             
             // Local list of integers to hold the first five measurements of the text.
             List<int> parameters = new List<int>();
+            
             // Create a list of the values of the vowels, consants etc from the text.
             parameters = analyseClass.AnalyseText(textToBeAnalysed);
             

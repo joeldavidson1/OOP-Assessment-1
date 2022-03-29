@@ -50,7 +50,8 @@ namespace CMP1903M_Assessment_1_Base_Code
                 {
                     throw new InvalidSentenceException("The text must contain letters to be analysed.\n");
                 }
-
+                
+                // Checks to see if the text contains an asterisk.
                 if (!text.Contains('*'))
                 {
                     throw new InvalidSentenceException("Text must include an * to be analysed.\n");
@@ -148,7 +149,12 @@ namespace CMP1903M_Assessment_1_Base_Code
             return valid;
         }
         
-        // COMMENT CORRECTLY
+       
+        // Method: FilePathInput.
+        // Arguments: none.
+        // Returns: string
+        // Prompts the user for a valid file path and checks with the ValidFileInput method to see if it's valid.
+        // Only returns when it's valid otherwise it recursively calls.
         public string FilePathInput()
         {
             Console.WriteLine("Please enter a valid file path for a .txt file: ");
@@ -168,7 +174,10 @@ namespace CMP1903M_Assessment_1_Base_Code
             return text;
         }
 
-        //  COMMENT CORRECTLY
+        // Method: UserOptions.
+        // Arguments: none
+        // Returns: string
+        // Obtains either "1" or "2" from the user depending on their choice.
         public string UserOptions()
         {
             Console.WriteLine("1. Do you want to enter the text via the keyboard?\n2. " +
