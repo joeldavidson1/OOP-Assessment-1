@@ -19,7 +19,7 @@ namespace CMP1903M_Assessment_1_Base_Code
             Console.WriteLine($"Number of vowels = {analysis[1]}");
             Console.WriteLine($"Number of consonants = {analysis[2]}");
             Console.WriteLine($"Number of upper case letters = {analysis[3]}");
-            Console.WriteLine($"Number of lower case letters = {analysis[4]}");
+            Console.WriteLine($"Number of lower case letters = {analysis[4]}\n");
         }
 
         // Method: LetterFrequencyOutputToConsole.
@@ -28,15 +28,24 @@ namespace CMP1903M_Assessment_1_Base_Code
         // Receives a dictionary and outputs the corresponding values to the console in a readable format.
         public void LetterFrequencyOutputToConsole(Dictionary<char, int> charFrequency)
         {
+            // Create an empty dictionary to be sorted alphabetically.
+            SortedDictionary<char, int> sorted = new SortedDictionary<char, int>();
+            
+            Console.WriteLine("Frequency of letters and the values in alphabetical order:");
             foreach (var charAndFrequency in charFrequency)
             {
                 // Checks the keys to see if they are upper and lower case letters only.
-                if ((charAndFrequency.Key >= 'a' && charAndFrequency.Key <= 'z') ||
-                    (charAndFrequency.Key >= 'A' && charAndFrequency.Key <= 'Z'))
+                if (charAndFrequency.Key >= 'a' && charAndFrequency.Key <= 'z')
                 {
-                    Console.WriteLine($"Letter: {charAndFrequency.Key} Frequency: {charAndFrequency.Value}");
+                    // Add them into the sorted dicitionary.
+                    sorted.Add(charAndFrequency.Key, charAndFrequency.Value);
                 }
-
+            }
+            
+            // Display the sorted dictionary in alphabetical order with their frequency.
+            foreach (var sortedChar in sorted)
+            {
+                Console.WriteLine($"Letter: {sortedChar.Key} Frequency: {sortedChar.Value}");
             }
         }
         

@@ -10,66 +10,51 @@ namespace CMP1903M_Assessment_1_Base_Code
     class Program
     {
         static void Main()
-        {
-            // Local list of integers to hold the first five measurements of the text.
-            List<int> parameters = new List<int>();
 
+        {
             // Create 'Input', 'Analyse' and 'Report' object.
             Input inputClass = new Input();
             Analyse analyseClass = new Analyse();
             Report reportClass = new Report();
 
             // Prompt user for either text from a .txt file, or from text entered in the console.
-            bool continueLoop = true;
-            while (continueLoop)
+            string textToBeAnalysed = " ";
+            string option = inputClass.UserOptions();
+            if (option == "1")
             {
-                Console.WriteLine("1. Do you want to enter the text via the keyboard?\n2. " +
-                                  "Do you want to read in the text from a .txt file?\nEnter 1 or 2."); 
-                string option = Console.ReadLine();
-                
-                if (option == "1")
-                {
-                    // Pass the user entered text into the analyseClass for analysis.
-                    string userInput = inputClass.ManualTextInput();
-                    parameters = analyseClass.AnalyseText(userInput);
-                    
-                    // Pass the user entered text to the reportClass for a full report on the analysis.
-                    reportClass.OutputToConsole(parameters);
-                    var characterDictionary = analyseClass.LetterFrequency(userInput);
-                    reportClass.LetterFrequencyOutputToConsole(characterDictionary);
-
-                    continueLoop = false;
-                }
-                else if (option == "2")
-                {
-                    // Ask the user for a file path of a .txt file and catch invalid file path exceptions.
-                    // Checks to see if the file path is valid. If it's not then it prompts the user again.
-                    if (inputClass.ValidFileInput() == false)
-                    {
-                        inputClass.ValidFileInput();
-                    }
-                    
-                    // Obtain the string the user entered after it's passed validation.
-                    string filePath = inputClass.text;
-                           
-                    // Pass the valid .txt file into the analyse and report Classes.
-                    string userFile = inputClass.FileTextInput(filePath);
-                    parameters = analyseClass.AnalyseText(userFile);
-                    reportClass.OutputToConsole(parameters);
-                    var characterDictionary = analyseClass.LetterFrequency(userFile);
-                    reportClass.LetterFrequencyOutputToConsole(characterDictionary);
-
-                    // Output the list of long words to a .txt file.
-                    List<string> longWordList = analyseClass.WordCount(userFile);
-                    reportClass.LongWordsToFile(longWordList);
-                    
-                    continueLoop = false;
-                }
-                else
-                {
-                    Console.WriteLine("Invalid input. Please enter either 1 or 2.\n");
-                }
+                // Check whether the user has entered valid text, if so reassign variable to the inputted text.
+                textToBeAnalysed = inputClass.ManualTextInput();
             }
-        }     
+            else if (option == "2")
+            {
+                // Check whether the user has entered a valid file path, if so reassign the variable to the text within
+                // the file.
+                textToBeAnalysed = inputClass.FilePathInput();
+                textToBeAnalysed = inputClass.FileTextInput(textToBeAnalysed);
+               
+            }
+            
+            // Create a dictionary of the letters and their frequency from the text.
+            Dictionary<char, int> characterDictionary = analyseClass.LetterFrequency(textToBeAnalysed);
+            
+            // Local list of integers to hold the first five measurements of the text.
+            List<int> parameters = new List<int>();
+            // Create a list of the values of the vowels, consants etc from the text.
+            parameters = analyseClass.AnalyseText(textToBeAnalysed);
+            
+            // Output the vowels, consonants, uppercase, lowercase and sentences to the console.
+            reportClass.OutputToConsole(parameters);
+            
+            // Output the letters and their frequency in alphabetical order to the console.
+            reportClass.LetterFrequencyOutputToConsole(characterDictionary);
+            
+            // Create and produce a list of words over 7 characters long and output to a .txt file
+            // if the user entered option 2.
+            if (option == "2")
+            {
+                List<string> longWordList = analyseClass.WordCount(textToBeAnalysed);
+                reportClass.LongWordsToFile(longWordList);
+            }
+        }
     }
 }

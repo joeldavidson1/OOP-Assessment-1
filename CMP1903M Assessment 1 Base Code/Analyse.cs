@@ -87,12 +87,15 @@ namespace CMP1903M_Assessment_1_Base_Code
             return values;
         }
         
+        
         // Method: LetterFrequency.
         // Arguments: string.
         // Returns: Dictionary of characters and integers.
         // Calculates what letters appear in the text as keys and appends their corresponding frequency to the value.
         public Dictionary<char, int> LetterFrequency(string input)
         {
+            // Convert string to lower as to only count letter occurrences not upper and lowercase.
+            input = input.ToLower();
             var charFrequency = new Dictionary<char, int>();
             foreach (var c in input)
             {
