@@ -12,7 +12,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         // Arguments: List of integers.
         // Returns: none.
         // Receives a list and outputs the corresponding values to the console in a readable format.
-        public void OutputToConsole(List <int> analysis)
+        public void OutputToConsole(List<int> analysis)
         {
             Console.WriteLine("\nAnalysis of the text:");
             Console.WriteLine($"Number of sentences entered = {analysis[0]}");
@@ -37,7 +37,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 // Checks the keys to see if they are upper and lower case letters only.
                 if (charAndFrequency.Key >= 'a' && charAndFrequency.Key <= 'z')
                 {
-                    // Add them into the sorted dicitionary.
+                    // Add them into the sorted dictionary.
                     sorted.Add(charAndFrequency.Key, charAndFrequency.Value);
                 }
             }
@@ -61,6 +61,19 @@ namespace CMP1903M_Assessment_1_Base_Code
             
             Console.WriteLine("Check the application's directory for the 'longwords.txt' file for a" +
                               " list of words over 7 characters.");
+        }
+        
+        // Method: ExpectedValues.
+        // Arguments: List of integers.
+        // Returns: none.
+        // Outputs the expected values of the test file and compares them with the analysed list.
+        public void ExpectedValues(List<int> analysis)
+        {
+            Console.WriteLine($"Number of sentences entered = {analysis[0]}. Expected value = 6");
+            Console.WriteLine($"Number of vowels = {analysis[1]}. Expected value = 189");
+            Console.WriteLine($"Number of consonants = {analysis[2]} Expected value = 317");
+            Console.WriteLine($"Number of upper case letters = {analysis[3]}. Expected value = 9");
+            Console.WriteLine($"Number of lower case letters = {analysis[4]}. Expected value = 497");
         }
     }
 }

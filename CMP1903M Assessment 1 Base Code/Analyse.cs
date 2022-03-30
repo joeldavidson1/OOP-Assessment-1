@@ -121,9 +121,25 @@ namespace CMP1903M_Assessment_1_Base_Code
             // Using regular expression to remove any special characters and split the text into just words.
             input = Regex.Replace(input, "[^a-zA-Z0-9]", " ");
             string[] words = input.Split();
+            
+            // Create a list of words over 7 characters long.
             List<string> longWords = words.Where(s => s.Length > 7).ToList();
 
             return longWords;
+        }
+        
+        // Method: ValidValues.
+        // Arguments: List of integers.
+        // Returns: bool
+        // Checks to see if the test file meets the expected values in the analysed text list.
+        public bool ValidValues(List<int> analysis)
+        {
+            if (analysis[0] == 6 && analysis[1] == 189 && analysis[2] == 317 && analysis[3] == 9 && analysis[4] == 497)
+            {
+                return true;
+            }
+            
+            return false;
         }
     }
 }

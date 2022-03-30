@@ -11,8 +11,9 @@ namespace CMP1903M_Assessment_1_Base_Code
     public class Input
     {
         // Handles the text input for Assessment 1.
-        // Encapsulate the text variable so it can only be set inside the Input class.
-        private string text { get; set; }
+        // Encapsulate the text variable so it can only be set inside the Input class. Someone might want to check the
+        // text outside of this class for debugging purposes.
+        public string text { get; private set; }
 
         // Method: manualTextInput.
         // Arguments: none.
@@ -20,6 +21,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         // Gets text input from the keyboard.
         public string ManualTextInput()
         {
+            // Ask the user for their input and raise exceptions with messages when incorrect input is entered.
             try
             {
                 Console.WriteLine("Please end the sentences with proper punctuation and end the text with" +
@@ -29,7 +31,7 @@ namespace CMP1903M_Assessment_1_Base_Code
                 // Checks to see if the string is empty or just whitespace.
                 if (string.IsNullOrWhiteSpace(text))
                 {
-                    throw new InvalidSentenceException("The text must contain letters to be analysed.\n");
+                    throw new InvalidSentenceException("Nothing to analyse in an empty string.\n");
                 }
                 
                 // Checks to see if the string contains only numbers.
@@ -70,6 +72,8 @@ namespace CMP1903M_Assessment_1_Base_Code
             return text;
         }
         
+        // Example of abstraction as the user does not need to have access to this method and is only used within the
+        // Input class.
         // Method: TextBeforeCharacter
         // Arguments: string
         // Returns: All of a string before a *.
@@ -91,7 +95,8 @@ namespace CMP1903M_Assessment_1_Base_Code
             text = TextBeforeCharacter(fileText);
             return text;
         }
-
+        
+        // Another example of data abstraction.
         // Method: ValidFileInput.
         // Arguments: none.
         // Returns: bool.
@@ -157,7 +162,7 @@ namespace CMP1903M_Assessment_1_Base_Code
         // Only returns when it's valid otherwise it recursively calls.
         public string FilePathInput()
         {
-            Console.WriteLine("Please enter a valid file path for a .txt file: ");
+            Console.WriteLine("Please enter the test file or another .txt file for analysis: ");
             string filePath = Console.ReadLine();
             text = filePath;
             
